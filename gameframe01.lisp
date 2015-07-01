@@ -102,12 +102,12 @@
 		   &key (bg "white") (fg "black") (width 9))
   (let ((btn (make-instance 'button 
 		       :text text 
-		       :font "-*-BPmono-Bold-Regular-*--*-140-*"
+		       ;;:font "-*-BPmono-Bold-Regular-*--*-140-*"
 		       :master master
 		       :command #'(lambda ()
 				  (funcall func data))
-		       :foreground fg
-		       :background bg
+		       ;;:foreground fg
+		       ;;:background bg
 		       :width width)))
 ;;    (format t (write-to-string btn))
     (if (not (equal data nil))
@@ -145,7 +145,8 @@
   (with-ltk ()
 ;  (start-wish)
 
-    (setf mainwindow (make-instance 'frame :background "black"))
+;;    (setf mainwindow (make-instance 'frame :background "black"))
+    (setf mainwindow (make-instance 'frame))
     (setf messagewidget 
       (make-instance 'label
 		     :text "messages" 
